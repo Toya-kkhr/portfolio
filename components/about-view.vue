@@ -1,0 +1,45 @@
+<template>
+       <v-row
+    align="center"
+    justify="center"
+    >
+      <v-col
+      cols="12"
+      sm="6"
+      align="center"
+      >
+        <div
+        class="pa-3"
+        >
+    <h2
+      style="text-decoration: underline;"
+    >
+      About
+      </h2>
+    </div>
+    <div
+    class="pa-3"
+    >
+      <v-img
+      src="/profile.jpg"
+      width="199px"
+      height="207px"
+      style="border-radius: 50%;"
+      >
+      </v-img>
+    </div>
+    <div
+    class="ma-3"
+    >
+      <p>
+        texttexttexttexttext
+        texttexttexttexttext
+        texttexttexttexttext
+        texttexttexttexttext
+        texttexttexttexttext
+        texttexttexttexttext
+      </p>
+    </div>
+          </v-col>
+    </v-row>
+</template>
