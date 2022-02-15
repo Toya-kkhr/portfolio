@@ -4,7 +4,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - portfolio',
-    title: 'portfolio',
+    title: '加古原 冬弥',
     htmlAttrs: {
       lang: 'ja',
     },
