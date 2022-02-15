@@ -28,17 +28,12 @@
       >
       </v-img>
     </div>
+    <div class="pa-2">加古原 冬弥</div>
     <div
-    class="ma-3"
+    class="ma-3 text-body-1"
     >
-      <p>
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-      </p>
+ 大阪生まれ24歳。専門学校卒業後、某ホテルにて3年弱ウェディングプランナーとして従事。
+ その後独学でプログラミングを学び、現在 受託システム開発会社にてプログラマーとして勤めている。
     </div>
           </v-col>
     </v-row>

@@ -4,6 +4,7 @@
   style="background: #EEEFEA;"
   >
     <v-navigation-drawer
+      v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
       v-model="drawer"
       app
       right
@@ -13,7 +14,10 @@
         <v-list-item
           v-for="(item) in items"
           :key="item.title"
-          :to="item.to"
+          v-scroll-to="item.to"
+          to
+          nuxt
+          @click.stop="drawer = !drawer"
         >
           <v-list-item-content>
             <v-list-item-title v-text="item.title" />
@@ -30,6 +34,7 @@
  icon
   :href="icon.url"
  target="_blank"
+ @click.stop="drawer = !drawer"
  >
    <v-icon>
      {{ icon.icon }}
@@ -49,8 +54,26 @@
 
       <v-spacer />
  
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon
+      v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
+       @click.stop="drawer = !drawer" />
 
+    <div
+          v-if="$vuetify.breakpoint.md || $vuetify.breakpoint.lg || $vuetify.breakpoint.xl"
+    >
+      <v-btn
+    v-for="(item, i) in items"
+    :key="i"
+    v-scroll-to="item.to"
+    text
+    active-class
+    nuxt
+    to
+      >
+
+    {{ item.title }}
+      </v-btn>
+</div>
     </v-app-bar>
       <v-main>
 
@@ -60,7 +83,9 @@
   id="about"
   class="mb-5"
   >
-  <v-container>
+  <v-container
+  class="my-12"
+  >
     <aboutView />
   </v-container>
   </div>
@@ -86,11 +111,10 @@ id="works"
 
 <div
 id="hobbys"
-  class="mb-5"
->
-    <v-container
       style="background: #E0E1DB;"
-    >
+       class="mb-5"
+>
+    <v-container>
     <hobbys-view />
   </v-container>
 </div>

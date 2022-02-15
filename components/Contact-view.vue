@@ -19,53 +19,77 @@
     </div>
 
         <div
-        class="pa-3"
+        class="pa-3 text-body-1"
         >
-              <p>
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-      </p>
+        お仕事のご依頼・ご相談からお茶会のお誘いまでなんでもお気軽にご連絡ください。
+        順次なるべく早くお返事致します。
     </div>
 
 <v-container>
-    <v-form>
+    <validation-observer
+    ref="observer"
+    v-slot= "{ invalid }"
+    >
+    <form
+    @submit.prevent="submit"
+    >
+<validation-provider
+v-slot="{errors}"
+rules="required"
+name="お名前"
+>
         <v-text-field
         v-model="name"
         label="お名前"
-        required
+        :error-messages="errors"
         >   
         </v-text-field>
+        </validation-provider>
 
+        <validation-provider
+        v-slot="{ errors }"
+        rules="required|email"
+        name="メールアドレス"
+        >
                 <v-text-field
         v-model="email"
         label="メールアドレス"
-        required
+        :error-messages="errors"
         >   
         </v-text-field>
+</validation-provider>
 
+<validation-provider
+v-slot="{ errors }"
+name="お問合せ内容"
+rules="required"
+>
         <v-textarea
         v-model="contents"
+        :error-messages="errors"
         label="内容"
-        required
         >
         </v-textarea>
+</validation-provider>
 
         <v-btn
+        :disabled="invalid"
         type="submit"
         width="100%"
         color="primary"
+        class="mt-5"
         style=
         "
+        height: 50px;
         border-radius: 30px;
         "
+        @click="clear"
         >
             送信
         </v-btn>
-    </v-form>
+    </form>
+</validation-observer>
+
 </v-container>
 
         </v-col>
@@ -79,6 +103,14 @@ export default {
             name: "",
             email: "",
             contents: ""
+        }
+    },
+    methods: {
+        clear() {
+            this.name=""
+            this.email=""
+            this.contents=""
+            this.$refs.observer.reset()
         }
     }
 }

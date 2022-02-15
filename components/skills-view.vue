@@ -28,16 +28,11 @@
       </v-img>
     </div>
     <div
-    class="pa-3"
+    class="pa-3 text-body-1"
     >
-      <p>
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-      </p>
+Vue.js/ Nuxt.js/ Node.js/ Swift/ Python/ Django<br>
+HTML/ CSS/ SCSS/ Java Script/ jQuery/ Photoshop/ adobe XD<br>
+Linux/ Git/ AWS/ MySQL/ SQLite
     </div>
           </v-col>
     </v-row>

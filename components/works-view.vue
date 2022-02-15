@@ -20,23 +20,73 @@
 
     <div>
         <v-card
-        v-for="item in items"
-        :key="item.title"
+        v-for="work in items"
+        :key="work"
         class="ma-5"
+        hover
+        raised
+        elevation-20
+        @click="openDialog(work)"
         >
+                                    
             <v-img
-            :src= "item.image"
+            :src= "work.image"
             >
-            </v-img>
-
+            </v-img> 
                     <v-card-title>
-            {{ item.title }}
+            {{ work.title }}
         </v-card-title>
 
             <v-card-text>
-                {{ item.skill }}
+                {{ work.skill }}
             </v-card-text>
         </v-card>
+
+        <v-dialog
+        v-if="currentWork"
+        v-model="dialog"
+        max-width="700px"
+        >
+          <v-card>
+
+              <v-col
+              align="center"
+              >
+                <v-img
+                :src="currentWork.image"
+                max-width="500px"
+                > 
+                </v-img>
+                      </v-col>
+
+                <v-card-title>
+                    {{ currentWork.title }}
+                </v-card-title>
+                <v-card-text>
+                    {{ currentWork.skill }}
+                </v-card-text>
+                <div
+                class="pa-10 text-center"
+                >
+                    {{ currentWork.exp }}
+                </div>
+                <div
+                >
+                <v-card-actions>
+                    <v-btn
+                    width="100%"
+                    color="grey darken-1"
+                    style="color:white;"
+                    :href="currentWork.url"
+                    target="_blank"
+                    height="50px"
+                    >
+                        サイトを見る
+                    </v-btn>
+                </v-card-actions>
+                </div>
+            </v-card>
+        </v-dialog>
     </div>
 
         </v-col>
@@ -47,26 +97,38 @@
 export default {
     data() {
         return {
+            dialog: false,
+            currentWork: "",
+            overlay: true,
             items: [
                 {
-                    title: "オンラインペーパーアイテム",
-                     image: "/sample.jpg",
-                     skill: "skillsetskillsetskillset",
-                     url: "https://bluwm.jp/"
+                    title: "ペーパーアイテム LP",
+                     image: "/bluwm-img.png",
+                     skill: "Vue.js/ Nuxt.js/ Netlify",
+                     url: "https://bluwm.jp/",
+                     exp: "ウェディングペーパーアイテムLINEbotサービス用ランディングページです。"
                 },
                 {
-                    title: "オンラインペーパーアイテム",
-                     image: "/sample.jpg",
-                     skill: "skillsetskillsetskillset2",
-                     url: "https://bluwm.jp/"
+                    title: "ペーパーアイテム LINEbot",
+                     image: "/linebot-img.png",
+                     skill: "Python/ Django/ heroku",
+                     url: "https://line.me/R/ti/p/%40336bwogm",
+                     exp: "紙で準備することが当たり前となっている結婚式で用いる招待状をはじめとするペーパーアイテムをLINEbotにしたサービスです。手軽さとコストダウンを叶えます。"
                 },
                 {
-                    title: "オンラインペーパーアイテム",
-                     image: "/sample.jpg",
-                     skill: "skillsetskillsetskillset3",
-                     url: "https://bluwm.jp/"
+                    title: "Portfolioサイト",
+                     image: "/portfolio-img.png",
+                     skill: "Vue.js/ Nuxt.js/ adobe XD/ Netlify",
+                     url: "https://bluwm.jp/",
+                     exp: "本サイトです。柔らかい色合いでシンプルなデザインを心がけて作成しました。"
                 }
             ]
+        }
+    },
+    methods: {
+        openDialog(item) {
+            this.currentWork = item
+            this.dialog = true
         }
     }
 }

@@ -1,11 +1,14 @@
 <template>
       <v-parallax
-      src="/background-sm.png"
+      src="/background.png"
+      align="center"
       >
         <v-container
         class="text-center"
         >
-             <h1>
+             <h1
+             class="text-h2"
+             >
           TOYA KAKOHARA<br>
           Portfolio
         </h1>

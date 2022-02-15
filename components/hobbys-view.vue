@@ -37,15 +37,12 @@ class="pa-3"
         </h3>
     </div>
 
-    <div>
-              <p>
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-      </p>
+    <div
+    class="text-body-1"
+    >
+        これまで、タイ・マレーシア・韓国・ハワイ・グアムを旅しました。
+        国内外問わず綺麗な景色を観たりその土地ならではの料理を食べるのが好きです。
+        中でもタイのリペ島は別格です！
     </div>
 </div>
 
@@ -68,15 +65,12 @@ class="pa-3"
         </h3>
     </div>
 
-    <div>
-              <p>
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-        texttexttexttexttext
-      </p>
+    <div
+    class="text-body-1"
+    >
+        2022年に入ってから習い始めました。
+        「和菓子が好きだから！」というのもありますが、
+        海外旅行に行った際に日本の魅力を伝えられる人でありたいと思っています。
     </div>
 </div>
         </v-col>
