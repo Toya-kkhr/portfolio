@@ -27,6 +27,8 @@
 
     <form
     name="contact1"
+    method="POST"
+    netlify-honey-pod="bot-field"
     netlify
     >
 
