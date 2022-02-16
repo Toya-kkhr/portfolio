@@ -26,7 +26,6 @@
     </div>
 
 <v-container>
-    <client-only>
     <validation-observer
     ref="observer"
     v-slot= "{ invalid }"
@@ -39,11 +38,11 @@
     @submit.prevent="submit"
     >
 
-    <input type="hidden" value="contact" name="form-name" />
+    <input type="hidden" :value="contact" name="form-name" />
     <div
     v-show="false"
     >
-        <input v-model="botField" type="text" name="bot-field" />
+        <input type="text" name="bot-field" />
     </div>
 
 <validation-provider
@@ -102,7 +101,6 @@ rules="required"
         </v-btn>
     </form>
 </validation-observer>
-</client-only>
 </v-container>
 
 
