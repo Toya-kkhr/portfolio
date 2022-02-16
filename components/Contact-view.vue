@@ -25,7 +25,7 @@
         順次なるべく早くお返事致します。
     </div>
 
-<v-container>
+<div>
     <validation-observer
     ref="observer"
     v-slot= "{ invalid }"
@@ -100,7 +100,7 @@ rules="required"
         </v-btn>
     </form>
 </validation-observer>
-</v-container>
+</div>
 
 
         </v-col>
