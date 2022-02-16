@@ -35,7 +35,6 @@
     method="POST"
     name="contact"
     netlify-honeypod="bot-field"
-    @submit.prevent="submit"
     netlify
     >
 
