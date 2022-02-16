@@ -24,15 +24,15 @@
         お仕事のご依頼・ご相談からお茶会のお誘いまでなんでもお気軽にご連絡ください。
         順次なるべく早くお返事致します。
     </div>
-
+<v-container>
     <form
-    name="contact1"
+    name="contact"
     method="POST"
     netlify-honey-pod="bot-field"
     netlify
     >
 
-    <input type="hidden" value="contact1" name="form-name" />
+    <input type="hidden" value="contact" name="form-name" />
     <div
     v-show="false"
     >
@@ -94,7 +94,7 @@ rules="required"
             送信
         </v-btn>
     </form>
-
+</v-container>
 
         </v-col>
     </v-row>
