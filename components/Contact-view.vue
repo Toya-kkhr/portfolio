@@ -24,6 +24,10 @@
         お仕事のご依頼・ご相談からお茶会のお誘いまでなんでもお気軽にご連絡ください。
         順次なるべく早くお返事致します。
     </div>
+
+<validation-observer
+v-slot= "{ invalid }"
+>
 <v-container>
     <form
     name="contact"
@@ -95,7 +99,7 @@ rules="required"
         </v-btn>
     </form>
 </v-container>
-
+</validation-observer>
         </v-col>
     </v-row>
 </template>
