@@ -30,6 +30,7 @@
     <validation-observer
     v-slot="{ invalid }"
     ref="observer"
+    tag="form"
     name="contact"
     method="POST"
     netlify-honey-pod="bot-field"
