@@ -26,6 +26,7 @@
     </div>
 
 <v-container>
+    <client-only>
     <validation-observer
     ref="observer"
     v-slot= "{ invalid }"
@@ -101,8 +102,9 @@ rules="required"
         </v-btn>
     </form>
 </validation-observer>
-
+</client-only>
 </v-container>
+
 
         </v-col>
     </v-row>
