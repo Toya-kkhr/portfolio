@@ -38,7 +38,12 @@
     @submit.prevent="submit"
     >
 
-    <input type="hidden" value="contact" name="bot-field" />
+    <input type="hidden" value="contact" name="form-name" />
+    <div
+    v-show="false"
+    >
+        <input v-model="botField" type="text" name="bot-field" />
+    </div>
 
 <validation-provider
 v-slot="{errors}"
