@@ -34,8 +34,8 @@
     method="POST"
     name="contact"
     netlify-honeypod="bot-field"
-    netlify
     @submit.prevent="submit"
+    netlify
     >
 
     <input type="hidden" :value="contact" name="form-name" />
