@@ -28,14 +28,12 @@
 <v-container>
     
     <validation-observer
-
     ref="observer"
     tag="form"
     name="contact"
     method="POST"
     netlify-honey-pod="bot-field"
     netlify
-    @click.prevent="submit"
     >
     <input type="hidden" value="contact" name="form-name" />
     <div
