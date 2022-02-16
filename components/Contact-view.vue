@@ -25,15 +25,16 @@
         順次なるべく早くお返事致します。
     </div>
 
-<validation-observer
-v-slot= "{ invalid }"
->
 <v-container>
-    <form
+    <validation-obsercer
+    v-slot="{ invalid }"
     name="contact"
     method="POST"
     netlify-honey-pod="bot-field"
     netlify
+    >
+    <form
+    @click.prevent="submit"
     >
 
     <input type="hidden" value="contact" name="form-name" />
@@ -93,13 +94,12 @@ rules="required"
         height: 50px;
         border-radius: 30px;
         "
-        @click="clear"
         >
             送信
         </v-btn>
     </form>
+    </validation-obsercer>
 </v-container>
-</validation-observer>
         </v-col>
     </v-row>
 </template>
