@@ -25,19 +25,12 @@
         順次なるべく早くお返事致します。
     </div>
 
-<div>
-    <validation-observer
-    ref="observer"
-    v-slot= "{ invalid }"
-    >
     <form
-    method="POST"
-    name="contact"
-    netlify-honeypod="bot-field"
-    data-netlify="true"
+    name="contact1"
+    netlify
     >
 
-    <input type="hidden" value="contact" name="form-name" />
+    <input type="hidden" value="contact1" name="form-name" />
     <div
     v-show="false"
     >
@@ -99,20 +92,6 @@ rules="required"
             送信
         </v-btn>
     </form>
-</validation-observer>
-</div>
-<form name="contact" netlify>
-    <input type="hidden" value="contact" name="form-name" />
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
 
 
         </v-col>
