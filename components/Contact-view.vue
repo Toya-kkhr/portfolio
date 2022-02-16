@@ -30,7 +30,6 @@
     ref="observer"
     v-slot= "{ invalid }"
     >
-    <template lang="html">
     <form
     method="POST"
     name="contact"
@@ -100,7 +99,6 @@ rules="required"
             送信
         </v-btn>
     </form>
-    </template>
 </validation-observer>
 </v-container>
 
