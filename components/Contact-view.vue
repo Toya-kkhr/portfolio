@@ -34,7 +34,7 @@
     <form
     method="POST"
     name="contact"
-    data-netlify-honeypod="bot-field"
+    netlify-honeypod="bot-field"
     netlify
     @submit.prevent="submit"
     >
