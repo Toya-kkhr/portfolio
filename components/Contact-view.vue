@@ -31,8 +31,14 @@
     v-slot= "{ invalid }"
     >
     <form
+    method="POST"
+    data-netlify="true"
+    data-netlify-honeypod="bot-field"
     @submit.prevent="submit"
     >
+
+    <input type="hidden" name="bot-field" />
+
 <validation-provider
 v-slot="{errors}"
 rules="required"
