@@ -26,7 +26,9 @@
     </div>
 
 <v-container>
-    <form
+    <v-form
+    ref="form"
+    v-model="valid"
     name="contact"
     method="POST"
     netlify-honey-pod="bot-field"
@@ -82,6 +84,7 @@ rules="required"
 
         <v-btn
         type="submit"
+        :disabled="!valid"
         width="100%"
         color="primary"
         class="mt-5"
@@ -94,7 +97,7 @@ rules="required"
         >
             送信
         </v-btn>
-    </form>
+    </v-form>
 </v-container>
         </v-col>
     </v-row>
@@ -106,7 +109,8 @@ export default {
         return {
             name: "",
             email: "",
-            contents: ""
+            contents: "",
+            valid: true,
         }
     },
     methods: {
