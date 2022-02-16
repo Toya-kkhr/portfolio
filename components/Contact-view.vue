@@ -33,8 +33,8 @@
     <form
     method="POST"
     name="contact"
-    data-netlify="true"
     data-netlify-honeypod="bot-field"
+    netlify
     @submit.prevent="submit"
     >
 
