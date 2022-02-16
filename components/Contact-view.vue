@@ -27,7 +27,7 @@
 
 <v-container>
     
-    <form
+    <validation-observer
 
     ref="observer"
     tag="form"
@@ -97,7 +97,7 @@ rules="required"
         >
             送信
         </v-btn>
-    </form>
+    </validation-observer>
 </v-container>
         </v-col>
     </v-row>
