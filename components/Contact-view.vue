@@ -26,14 +26,11 @@
     </div>
 
 <v-container>
-    <validation-obsercer
-    v-slot="{ invalid }"
+    <form
     name="contact"
     method="POST"
     netlify-honey-pod="bot-field"
     netlify
-    >
-    <form
     @click.prevent="submit"
     >
 
@@ -84,7 +81,6 @@ rules="required"
 </validation-provider>
 
         <v-btn
-        :disabled="invalid"
         type="submit"
         width="100%"
         color="primary"
@@ -94,11 +90,11 @@ rules="required"
         height: 50px;
         border-radius: 30px;
         "
+        @click="validate"
         >
             送信
         </v-btn>
     </form>
-    </validation-obsercer>
 </v-container>
         </v-col>
     </v-row>
@@ -114,11 +110,9 @@ export default {
         }
     },
     methods: {
-        clear() {
-            this.name=""
-            this.email=""
-            this.contents=""
-            this.$refs.observer.reset()
+        validate() {
+            this.$refs.form.validate()
+            this.$refs.form.reset()
         }
     }
 }
