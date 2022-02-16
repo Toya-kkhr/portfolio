@@ -32,12 +32,13 @@
     >
     <form
     method="POST"
+    name="contact"
     data-netlify="true"
     data-netlify-honeypod="bot-field"
     @submit.prevent="submit"
     >
 
-    <input type="hidden" name="bot-field" />
+    <input type="hidden" value="contact" name="bot-field" />
 
 <validation-provider
 v-slot="{errors}"
