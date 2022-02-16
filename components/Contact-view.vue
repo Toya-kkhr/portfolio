@@ -27,8 +27,8 @@
 
 <v-container>
     
-    <validation-observer
-    v-slot="{ invalid }"
+    <form
+
     ref="observer"
     tag="form"
     name="contact"
@@ -97,7 +97,7 @@ rules="required"
         >
             送信
         </v-btn>
-    </validation-observer>
+    </form>
 </v-container>
         </v-col>
     </v-row>
@@ -110,7 +110,6 @@ export default {
             name: "",
             email: "",
             contents: "",
-            valid: true,
         }
     },
     methods: {
