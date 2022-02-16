@@ -27,9 +27,9 @@
 
 <v-container>
     
-    <validation-observer
+    <validation-observer slim>
+    <form
     ref="observer"
-    tag="form"
     name="contact"
     method="POST"
     netlify-honey-pod="bot-field"
@@ -95,6 +95,7 @@ rules="required"
         >
             送信
         </v-btn>
+    </form>
     </validation-observer>
 </v-container>
         </v-col>
