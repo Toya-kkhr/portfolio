@@ -47,7 +47,7 @@
           <v-textarea
             v-model="contents"
             label="message"
-            name="contents"
+            name="message"
           />
           <v-btn
             :disabled="isEmpty"
@@ -69,7 +69,7 @@ export default {
             title: "contact",
             name: "",
             email: "",
-            contents: "",
+            message: "",
         }
     },
     methods: {
