@@ -50,6 +50,7 @@
     >
           <v-text-field
             v-model="name"
+            type="text"
             label="name"
             name="name"
             :error-messages="errors"
@@ -63,6 +64,7 @@
     >
           <v-text-field
             v-model="email"
+            type="email"
             label="E-mail"
             name="email"
             :error-messages="errors"
