@@ -53,7 +53,6 @@
             label="name"
             name="name"
             :error-messages="errors"
-            autofocus
           />
     </validation-provider>
 
