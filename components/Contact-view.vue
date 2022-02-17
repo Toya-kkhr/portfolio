@@ -26,9 +26,7 @@
     </div>
 
 <v-container>
-    <validation-observer
-v-slot="{ invalid }"
-    slim>
+    <validation-observer slim>
     <form
     ref="observer"
     name="contact"
@@ -83,7 +81,6 @@ rules="required"
 </validation-provider>
 
         <v-btn
-        :disabled="invalid"
         type="submit"
         width="100%"
         color="primary"
