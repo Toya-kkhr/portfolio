@@ -27,7 +27,12 @@
 
 <v-container>
     <validation-observer>
-        <v-form name="contact" method="post" netlify>
+        <v-form 
+        name="contact"
+        method="post"
+        data-netlify-honeypot="botfield"
+        netlify
+        >
       <v-text-field
         v-show="false"
         v-model="title"
@@ -55,6 +60,11 @@
           >
             送信
           </v-btn>
+          <v-text-field
+          v-show="false"
+          v-model="botfield"
+          >
+          </v-text-field>
     </v-form>
     </validation-observer>
 </v-container>
@@ -70,6 +80,7 @@ export default {
             name: "",
             email: "",
             message: "",
+            botfield: ""
         }
     },
     methods: {
