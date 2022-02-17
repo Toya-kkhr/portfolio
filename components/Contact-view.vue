@@ -26,7 +26,10 @@
     </div>
 
 <v-container>
-    <validation-observer>
+    <validation-observer
+    ref="observer"
+    v-slot="{ invalid }"
+    >
         <v-form 
         name="contact"
         method="post"
@@ -54,17 +57,17 @@
             label="message"
             name="message"
           />
-          <v-btn
-            :disabled="isEmpty"
-            type="submit"
-          >
-            送信
-          </v-btn>
-          <v-text-field
+            <v-text-field
           v-show="false"
           v-model="botfield"
           >
           </v-text-field>
+          <v-btn
+            :disabled="invalid"
+            type="submit"
+          >
+            送信
+          </v-btn>
     </v-form>
     </validation-observer>
 </v-container>
