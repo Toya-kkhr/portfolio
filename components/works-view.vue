@@ -31,6 +31,7 @@
                                     
             <v-img
             :src= "work.image"
+            :lazy-src="work.lazy"
             >
             </v-img> 
                     <v-card-title>
@@ -54,6 +55,7 @@
               >
                 <v-img
                 :src="currentWork.image"
+                :lazy-src="currentWork.lazy"
                 max-width="500px"
                 > 
                 </v-img>
@@ -104,6 +106,7 @@ export default {
                 {
                     title: "ペーパーアイテム LP",
                      image: "/bluwm-img.png",
+                     lazy: "/bluwm-lazy.png",
                      skill: "Vue.js/ Nuxt.js/ Netlify",
                      url: "https://bluwm.jp/",
                      exp: "ウェディングペーパーアイテムLINEbotサービス用ランディングページです。"
@@ -111,6 +114,7 @@ export default {
                 {
                     title: "ペーパーアイテム LINEbot",
                      image: "/linebot-img.png",
+                     lazy: "/linebot-lazy.png",
                      skill: "Python/ Django/ heroku",
                      url: "https://line.me/R/ti/p/%40336bwogm",
                      exp: "紙で準備することが当たり前となっている結婚式で用いる招待状をはじめとするペーパーアイテムをLINEbotにしたサービスです。手軽さとコストダウンを叶えます。"
@@ -118,8 +122,9 @@ export default {
                 {
                     title: "Portfolioサイト",
                      image: "/portfolio-img.png",
+                     lazy: "portfolio-lazy.png",
                      skill: "Vue.js/ Nuxt.js/ adobe XD/ Netlify",
-                     url: "https://bluwm.jp/",
+                     url: "https://kakohara.me/",
                      exp: "本サイトです。柔らかい色合いでシンプルなデザインを心がけて作成しました。"
                 }
             ]

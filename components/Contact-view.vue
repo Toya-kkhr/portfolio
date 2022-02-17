@@ -60,7 +60,7 @@
     <validation-provider
         v-slot="{errors}"
         name="メールアドレス"
-        rules="required"
+        rules="required|email"
     >
           <v-text-field
             v-model="email"
@@ -91,6 +91,10 @@
           <v-btn
             :disabled="invalid"
             type="submit"
+            width="100%"
+            height="50px"
+            class="rounded-pill"
+            color="primary"
           >
             送信
           </v-btn>

@@ -22,6 +22,7 @@
     >
       <v-img
       src="/profile.jpg"
+      lazy-src="/profile-lazy.png"
       width="199px"
       height="207px"
       style="border-radius: 50%;"
