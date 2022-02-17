@@ -26,48 +26,37 @@
     </div>
 
 <v-container>
-        <v-form name="contact" method="post" netlify>
+    <validation-observer>
+        <v-form method="post" netlify>
       <v-text-field
         v-show="false"
         v-model="title"
         name="form-name"
       />
-      <v-row>
-        <v-col cols="12">
           <v-text-field
             v-model="name"
             label="name"
+            name="name"
             autofocus
           />
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12">
           <v-text-field
             v-model="email"
             label="E-mail"
+            name="email"
           />
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12">
           <v-textarea
             v-model="contents"
             label="message"
+            name="contents"
           />
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
           <v-btn
             :disabled="isEmpty"
             type="submit"
           >
-            submit
+            送信
           </v-btn>
-        </v-col>
-      </v-row>
     </v-form>
+    </validation-observer>
 </v-container>
         </v-col>
     </v-row>
