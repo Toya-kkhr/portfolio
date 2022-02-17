@@ -33,6 +33,7 @@
     method="POST"
     netlify-honey-pod="bot-field"
     netlify
+    @click.prevent="submit"
     >
     <input type="hidden" value="contact" name="form-name" />
     <div
