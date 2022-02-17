@@ -44,8 +44,14 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    ['vue-scrollto/nuxt', { duration: 1000 }]
+    ['vue-scrollto/nuxt', { duration: 1000 }],
+    ['@nuxtjs/google-gtag']
   ],
+
+  'google-gtag':{
+    id: 'G-LDZNPZMBJD',
+    debug: false,
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

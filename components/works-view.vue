@@ -20,8 +20,8 @@
 
     <div>
         <v-card
-        v-for="work in items"
-        :key="work"
+        v-for="(work, i) in items"
+        :key="i"
         class="ma-5"
         hover
         raised
