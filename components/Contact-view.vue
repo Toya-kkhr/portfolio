@@ -36,27 +36,53 @@
         data-netlify-honeypot="botfield"
         netlify
         >
+
       <v-text-field
         v-show="false"
         v-model="title"
         name="form-name"
       />
+
+    <validation-provider
+    v-slot="{errors}"
+    name="お名前"
+    rules="required"
+    >
           <v-text-field
             v-model="name"
             label="name"
             name="name"
+            :error-messages="errors"
             autofocus
           />
+    </validation-provider>
+
+    <validation-provider
+        v-slot="{errors}"
+        name="メールアドレス"
+        rules="required"
+    >
           <v-text-field
             v-model="email"
             label="E-mail"
             name="email"
+            :error-messages="errors"
           />
+    </validation-provider>
+
+        <validation-provider
+            v-slot="{errors}"
+            name="メッセージ"
+            rules="required"
+        >
           <v-textarea
             v-model="contents"
             label="message"
             name="message"
+            :error-messages="errors"
           />
+        </validation-provider>
+
             <v-text-field
           v-show="false"
           v-model="botfield"
