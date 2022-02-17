@@ -27,9 +27,12 @@
 
 <v-container>
     
-    <validation-observer slim>
-    <form
+    <validation-observer
     ref="observer"
+v-slot="{ invalid }"
+    slim
+    >
+    <form
     name="contact"
     method="POST"
     netlify-honey-pod="bot-field"
