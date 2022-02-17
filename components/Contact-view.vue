@@ -26,60 +26,37 @@
     </div>
 
 <v-container>
-    <validation-observer slim>
-    <form
-    ref="observer"
+    <v-form
+    ref="form"
     name="contact"
     method="POST"
     netlify-honey-pod="bot-field"
     netlify
-    @click.prevent="submit"
     >
-    <input type="hidden" value="contact" name="form-name" />
-    <div
-    v-show="false"
-    >
-        <input type="text" name="bot-field" />
-    </div>
+    <v-text-field v-model="title" type="hidden" name="form-name" />
 
-<validation-provider
-v-slot="{errors}"
-rules="required"
-name="お名前"
->
+        <v-text-field v-show="false" name="bot-field" />
+
         <v-text-field
         v-model="name"
         label="お名前"
-        :error-messages="errors"
+        required
         >   
         </v-text-field>
-        </validation-provider>
 
-        <validation-provider
-        v-slot="{ errors }"
-        rules="required|email"
-        name="メールアドレス"
-        >
-                <v-text-field
+        <v-text-field
         v-model="email"
         label="メールアドレス"
-        :error-messages="errors"
+        required
         >   
         </v-text-field>
-</validation-provider>
 
-<validation-provider
-v-slot="{ errors }"
-name="お問合せ内容"
-rules="required"
->
         <v-textarea
         v-model="contents"
-        :error-messages="errors"
         label="内容"
+        required
         >
         </v-textarea>
-</validation-provider>
 
         <v-btn
         type="submit"
@@ -94,8 +71,7 @@ rules="required"
         >
             送信
         </v-btn>
-    </form>
-    </validation-observer>
+    </v-form>
 </v-container>
         </v-col>
     </v-row>
@@ -105,13 +81,15 @@ rules="required"
 export default {
     data() {
         return {
+            title: "contact",
             name: "",
             email: "",
             contents: "",
         }
     },
     methods: {
-        validate() {
+        submit() {
+            
         }
     }
 }
