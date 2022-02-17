@@ -37,7 +37,6 @@
           <v-text-field
             v-model="name"
             label="name"
-            name="name"
             autofocus
           />
         </v-col>
@@ -47,7 +46,6 @@
           <v-text-field
             v-model="email"
             label="E-mail"
-            name="email"
           />
         </v-col>
       </v-row>
@@ -56,7 +54,6 @@
           <v-textarea
             v-model="contents"
             label="message"
-            name="message"
           />
         </v-col>
       </v-row>
