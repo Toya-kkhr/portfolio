@@ -26,7 +26,7 @@
     </div>
 
 <v-container>
-        <v-form method="post" netlify>
+        <v-form name="contact" method="post" netlify>
       <v-text-field
         v-show="false"
         v-model="title"
