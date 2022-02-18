@@ -78,7 +78,7 @@
             rules="required"
         >
           <v-textarea
-            v-model="contents"
+            v-model="message"
             label="message"
             name="message"
             :error-messages="errors"
