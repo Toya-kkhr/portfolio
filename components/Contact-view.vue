@@ -35,6 +35,7 @@
         method="post"
         data-netlify-honeypot="botfield"
         netlify
+        @click.prevent="submit"
         >
 
       <v-text-field
@@ -89,6 +90,10 @@
           v-model="botfield"
           >
           </v-text-field>
+
+          <div
+          class="pa-4"
+          >
           <v-btn
             :disabled="invalid"
             type="submit"
@@ -99,6 +104,7 @@
           >
             送信
           </v-btn>
+          </div>
     </v-form>
     </validation-observer>
 </v-container>
