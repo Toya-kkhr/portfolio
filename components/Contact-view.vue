@@ -30,18 +30,14 @@
     ref="observer"
     v-slot="{ invalid }"
     tag="form"
+    name="contact"
+    method="post"
+    data-netlify-honeypot="bot-field"
+    netlify
+    action="/success"
     >
-        <v-form 
-        name="contact"
-        method="post"
-        data-netlify-honeypot="bot-field"
-        netlify
-        action="/success"
-        @click.prevent="submit"
-        >
-
       <v-text-field
-        v-show="false"
+      v-show="false"
         v-model="contact"
         name="form-name"
       />
@@ -108,7 +104,6 @@
             送信
           </v-btn>
           </div>
-    </v-form>
     </validation-observer>
 </v-container>
         </v-col>
