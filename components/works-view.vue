@@ -105,24 +105,24 @@ export default {
             items: [
                 {
                     title: "ペーパーアイテム LP",
-                     image: "/bluwm-img.png",
-                     lazy: "/bluwm-lazy.png",
+                     image: "/bluwm-img.webp",
+                     lazy: "/bluwm-lazy.webp",
                      skill: "Vue.js/ Nuxt.js/ Netlify",
                      url: "https://bluwm.jp/",
                      exp: "ウェディングペーパーアイテムLINEbotサービス用ランディングページです。"
                 },
                 {
                     title: "ペーパーアイテム LINEbot",
-                     image: "/linebot-img.png",
-                     lazy: "/linebot-lazy.png",
+                     image: "/linebot-img.webp",
+                     lazy: "/linebot-lazy.webp",
                      skill: "Python/ Django/ heroku",
                      url: "https://line.me/R/ti/p/%40336bwogm",
                      exp: "紙で準備することが当たり前となっている結婚式で用いる招待状をはじめとするペーパーアイテムをLINEbotにしたサービスです。手軽さとコストダウンを叶えます。"
                 },
                 {
                     title: "Portfolioサイト",
-                     image: "/portfolio-img.png",
-                     lazy: "portfolio-lazy.png",
+                     image: "/portfolio-img.webp",
+                     lazy: "portfolio-lazy.webp",
                      skill: "Vue.js/ Nuxt.js/ adobe XD/ Netlify",
                      url: "https://kakohara.me/",
                      exp: "本サイトです。柔らかい色合いでシンプルなデザインを心がけて作成しました。"

@@ -21,8 +21,8 @@
     class="pa-3"
     >
       <v-img
-      src="/profile.jpg"
-      lazy-src="/profile-lazy.png"
+      src="/profile.webp"
+      lazy-src="/profile-lazy.webp"
       width="199px"
       height="207px"
       style="border-radius: 50%;"
