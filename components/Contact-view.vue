@@ -29,11 +29,12 @@
     <validation-observer
     ref="observer"
     v-slot="{ invalid }"
+    tag="form"
     >
         <v-form 
         name="contact"
         method="post"
-        data-netlify-honeypot="botfield"
+        data-netlify-honeypot="bot-field"
         netlify
         action="/success"
         @click.prevent="submit"
@@ -41,7 +42,7 @@
 
       <v-text-field
         v-show="false"
-        v-model="title"
+        v-model="contact"
         name="form-name"
       />
 
@@ -89,6 +90,7 @@
             <v-text-field
           v-show="false"
           v-model="botfield"
+          name="bot-field"
           >
           </v-text-field>
 
@@ -118,7 +120,7 @@ export default {
   name: "ContactPage",
     data() {
         return {
-            title: "contact",
+            contact: "contact",
             name: "",
             email: "",
             message: "",
@@ -127,7 +129,24 @@ export default {
     },
     methods: {
         submit() {
-            
+            const params = new URLSearchParams()
+            params.append('form-name', 'contact')
+            params.append('name', this.name)
+            params.append('email', this.email)
+            params.append('message', this.message)
+
+            if(this.botfield) {
+              params.append('bot-field', this.botfield)
+            }
+            this.$axios
+            .$post('', params)
+            .then()(() => {
+              print("success")
+            })
+            .catch( err => {
+              print("error", err)
+            })
+  
         }
     }
 }
