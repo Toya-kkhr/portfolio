@@ -99,6 +99,8 @@
           </v-btn>
           </div>
     </validation-observer>
+</v-container>
+
 
               <form
     name="contact"
@@ -114,9 +116,10 @@
     <input type="text" name="bot-field" />
     <button type="submit">button</button>
     </form>
-</v-container>
         </v-col>
     </v-row>
+
+    
 </template>
 
 <script>
