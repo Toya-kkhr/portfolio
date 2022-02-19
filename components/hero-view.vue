@@ -7,7 +7,7 @@
         class="text-center"
         >
              <h1
-             class="text-h2"
+             style="font-weight: 300;"
              >
                 <vue-typer
                 :text="hero"
@@ -25,7 +25,7 @@
 export default {
     data() {
         return {
-            hero: "TOYA\n KAKOHARA\n Portfolio"
+            hero: "TOYA KAKOHARA\n Portfolio"
         }
     }
 }

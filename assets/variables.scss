@@ -2,3 +2,12 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
+
+$breakpoint: 767px;
+
+// mixinの定義
+@mixin media() {
+		@media screen and (max-width: $breakpoint) {
+			@content;
+		}
+}
