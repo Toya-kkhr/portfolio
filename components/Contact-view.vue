@@ -31,11 +31,13 @@
     v-slot="{ invalid }"
     tag="form"
     name="contact"
+    method="POST"
+    netlify
     >
       <v-text-field
       v-show="false"
-        v-model="contact"
-        name="form-name"
+      v-model="contact"
+      name="form-name"
       />
 
     <validation-provider
