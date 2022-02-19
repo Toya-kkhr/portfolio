@@ -29,6 +29,8 @@
     <validation-observer
     ref="observer"
     v-slot="{ invalid }"
+    tag="form"
+    name="contact"
     >
       <v-text-field
       v-show="false"
@@ -100,22 +102,6 @@
           </div>
     </validation-observer>
 </v-container>
-
-
-              <form
-    name="contact"
-    method="post"
-    data-netlify-honeypot="bot-field"
-    netlify
-    action="/success"
-    >
-    <input type="hidden" name="form-name" value="contact" />
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <textarea type="text" name="message" />
-    <input type="text" name="bot-field" />
-    <button type="submit">button</button>
-    </form>
         </v-col>
     </v-row>
 
