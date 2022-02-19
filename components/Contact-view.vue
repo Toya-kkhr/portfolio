@@ -33,6 +33,7 @@
     name="contact"
     method="POST"
     netlify
+    action="/success"
     @click.prevent="submit"
     >
       <v-text-field
