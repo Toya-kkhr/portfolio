@@ -29,9 +29,8 @@
     <validation-observer
     ref="observer"
     v-slot="{ invalid }"
-    tag="form"
     name="contact"
-    method="POST" 
+    method="POST"
     >
       <v-text-field
       v-show="false"
@@ -92,11 +91,11 @@
           >
           <v-btn
             :disabled="invalid"
-            type="submit"
             width="100%"
             height="50px"
             class="rounded-pill"
             color="primary"
+            @click.prevent="submit"
           >
             送信
           </v-btn>
@@ -110,7 +109,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   name: "ContactPage",
     data() {
@@ -126,10 +124,9 @@ export default {
     },
     methods: {
         submit() {
-            if(this.isSending){
-              return
-            }
-            this.isSending = true
+          if (this.isSending) {
+            return
+          }
 
             const params = new URLSearchParams()
             params.append('form-name', 'contact')
@@ -140,16 +137,17 @@ export default {
             if(this.botfield) {
               params.append('bot-field', this.botfield)
             }
-            axios.post('/', params)
-            .then()(() => {
-              this.isSubmit = true
-              print("success")
+            
+              this.$axios.$post("/", params)
+            .then(() => {
+              console.log("success")
+              this.$router.push('/success')
             })
             .catch( err => {
-              print("error", err)
+              console.log("error", err)
             })
             .finally(() => {
-              this.isSending = false
+              console.log('aaaa')
             })
         }
     }
