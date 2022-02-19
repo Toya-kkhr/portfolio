@@ -103,6 +103,23 @@
           </div>
     </validation-observer>
 </v-container>
+
+<form
+name="contact" 
+method="POST" 
+data-netlify="true"
+action="/success"
+@click.prevent="submit"
+>
+<input type="hidden" name="form-name" value="contact">
+<input v-model="name" type="text" name="name" />
+<input v-model="email" type="text" name="email" />
+<input v-model="message" type="text" name="message" />
+<button 
+type="submit"
+>Send</button>
+</form>
+
         </v-col>
     </v-row>
 
