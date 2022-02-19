@@ -29,20 +29,12 @@
     <validation-observer
     ref="observer"
     v-slot="{ invalid }"
-    tag="form"
-    name="contact"
-    method="post"
-    data-netlify-honeypot="bot-field"
-    netlify
-    action="/success"
     >
-      <!-- <v-text-field
+      <v-text-field
       v-show="false"
         v-model="contact"
         name="form-name"
-      /> -->
-
-       <input type="hidden" name="form-name" value="contact">
+      />
 
     <validation-provider
     v-slot="{errors}"
@@ -102,12 +94,26 @@
             height="50px"
             class="rounded-pill"
             color="primary"
-            @click="submit"
           >
             送信
           </v-btn>
           </div>
     </validation-observer>
+
+              <form
+    name="contact"
+    method="post"
+    data-netlify-honeypot="bot-field"
+    netlify
+    action="/success"
+    >
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea type="text" name="message" />
+    <input type="text" name="bot-field" />
+    <button type="submit">button</button>
+    </form>
 </v-container>
         </v-col>
     </v-row>
