@@ -29,14 +29,8 @@
     <validation-observer
     ref="observer"
     v-slot="{ invalid }"
-    name="contact"
-    method="POST"
+    name="contact" 
     >
-      <v-text-field
-      v-show="false"
-      v-model="contact"
-      name="form-name"
-      />
 
     <validation-provider
     v-slot="{errors}"
@@ -86,6 +80,19 @@
           >
           </v-text-field>
 
+          <form
+            name="contact" 
+            method="POST" 
+            data-netlify="true"
+            action="/success"
+            @click.prevent="submit"
+          >
+
+          <input type="hidden" name="form-name" value="contact">
+          <input v-model="name" type="hidden" name="name" />
+          <input v-model="email" type="hidden" name="email" />
+          <input v-model="message" type="hidden" name="message" />
+
           <div
           class="pa-4"
           >
@@ -96,30 +103,13 @@
             class="rounded-pill"
             color="primary"
             type="submit"
-            @click.prevent="submit"
           >
             送信
           </v-btn>
           </div>
+        </form>
     </validation-observer>
 </v-container>
-
-<form
-name="contact" 
-method="POST" 
-data-netlify="true"
-action="/success"
-@click.prevent="submit"
->
-<input type="hidden" name="form-name" value="contact">
-<input v-model="name" type="text" name="name" />
-<input v-model="email" type="text" name="email" />
-<input v-model="message" type="text" name="message" />
-<button 
-type="submit"
->Send</button>
-</form>
-
         </v-col>
     </v-row>
 
