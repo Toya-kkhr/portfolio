@@ -104,7 +104,7 @@ export default {
             overlay: true,
             items: [
                 {
-                    title: "ペーパーアイテム LP",
+                    title: "Bluwm LP",
                      image: "/bluwm-img.webp",
                      lazy: "/bluwm-lazy.webp",
                      skill: "Vue.js/ Nuxt.js/ Netlify",
@@ -112,7 +112,7 @@ export default {
                      exp: "ウェディングペーパーアイテムLINEbotサービス用ランディングページです。"
                 },
                 {
-                    title: "ペーパーアイテム LINEbot",
+                    title: "Bluwm LINEbotサービス",
                      image: "/linebot-img.webp",
                      lazy: "/linebot-lazy.webp",
                      skill: "Python/ Django/ heroku",
