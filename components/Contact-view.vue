@@ -36,11 +36,13 @@
     netlify
     action="/success"
     >
-      <v-text-field
+      <!-- <v-text-field
       v-show="false"
         v-model="contact"
         name="form-name"
-      />
+      /> -->
+
+       <input type="hidden" name="form-name" value="contact">
 
     <validation-provider
     v-slot="{errors}"
