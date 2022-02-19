@@ -21,7 +21,7 @@
     class="pa-3"
     >
       <v-img
-      src="/profile.jpg"
+      src="/profile.png"
       lazy-src="/profile-lazy.png"
       width="199px"
       height="207px"
