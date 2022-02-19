@@ -31,10 +31,7 @@
     v-slot="{ invalid }"
     tag="form"
     name="contact"
-    method="POST"
-    netlify
-    action="/success"
-    @click.prevent="submit"
+    method="POST" 
     >
       <v-text-field
       v-show="false"
@@ -113,6 +110,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: "ContactPage",
     data() {
@@ -121,11 +119,18 @@ export default {
             name: "",
             email: "",
             message: "",
-            botfield: ""
+            botfield: "",
+            isSubmit: false,
+            isSending: false,
         }
     },
     methods: {
         submit() {
+            if(this.isSending){
+              return
+            }
+            this.isSending = true
+
             const params = new URLSearchParams()
             params.append('form-name', 'contact')
             params.append('name', this.name)
@@ -135,15 +140,17 @@ export default {
             if(this.botfield) {
               params.append('bot-field', this.botfield)
             }
-            this.$axios
-            .$post('', params)
+            axios.post('/', params)
             .then()(() => {
+              this.isSubmit = true
               print("success")
             })
             .catch( err => {
               print("error", err)
             })
-  
+            .finally(() => {
+              this.isSending = false
+            })
         }
     }
 }
