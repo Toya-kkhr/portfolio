@@ -95,6 +95,7 @@
             height="50px"
             class="rounded-pill"
             color="primary"
+            type="submit"
             @click.prevent="submit"
           >
             送信
