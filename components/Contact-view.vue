@@ -102,6 +102,7 @@
             height="50px"
             class="rounded-pill"
             color="primary"
+            @click="submit"
           >
             送信
           </v-btn>
