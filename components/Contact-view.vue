@@ -84,7 +84,6 @@
             name="contact" 
             method="POST" 
             data-netlify="true"
-            action="/success"
             @click.prevent="submit"
           >
 
@@ -148,14 +147,12 @@ export default {
             
               this.$axios.$post("/", params)
             .then(() => {
-              console.log("success")
               this.$router.push('/success')
             })
             .catch( err => {
-              console.log("error", err)
+              console.error("error", err)
             })
             .finally(() => {
-              console.log('aaaa')
             })
         }
     }

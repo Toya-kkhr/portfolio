@@ -125,7 +125,7 @@ export default {
                      image: "/portfolio-img.webp",
                      lazy: "portfolio-lazy.webp",
                      skill: "Vue.js/ Nuxt.js/ adobe XD/ Netlify",
-                     url: "https://kakohara.me/",
+                     url: "/",
                      exp: "本サイトです。柔らかい色合いでシンプルなデザインを心がけて作成しました。"
                 }
             ]
