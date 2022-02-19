@@ -14,8 +14,7 @@
         <v-list-item
           v-for="(item) in items"
           :key="item.title"
-          :v-scroll-to="item.to"
-          to
+          v-scroll-to="item.to"
           nuxt
           @click.stop="drawer = !drawer"
         >
