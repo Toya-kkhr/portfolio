@@ -12,7 +12,7 @@
                 <vue-typer
                 :text="hero"
                 :repeat="0"
-                :type-delay="150"
+                :type-delay="110"
                 :caret-animation="smooth"
                 ></vue-typer>
           
