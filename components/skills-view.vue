@@ -37,3 +37,9 @@ Linux/ Git/ AWS/ MySQL/ SQLite
           </v-col>
     </v-row>
 </template>
+
+<script>
+export default {
+  name: "SkillsPage",
+}
+</script>

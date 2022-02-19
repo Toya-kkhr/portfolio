@@ -76,3 +76,9 @@ class="pa-3"
         </v-col>
     </v-row>
 </template>
+
+<script>
+export default {
+    name: "HobbysPage",
+}
+</script>

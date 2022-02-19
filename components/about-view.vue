@@ -39,3 +39,9 @@
           </v-col>
     </v-row>
 </template>
+
+<script>
+export default {
+  name: "AboutPage"
+}
+</script>

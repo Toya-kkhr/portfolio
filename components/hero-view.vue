@@ -13,7 +13,7 @@
                 :text="hero"
                 :repeat="0"
                 :type-delay="110"
-                :caret-animation="smooth"
+                caret-animation="smooth"
                 ></vue-typer>
           
         </h1>
@@ -23,6 +23,7 @@
 
 <script>
 export default {
+           name: "TopPage",
     data() {
         return {
             hero: "TOYA KAKOHARA\n Portfolio"

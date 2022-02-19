@@ -1,22 +1,57 @@
 <template>
 <div>
+
+<hero-view />
+
   <div
+  id="about"
+  class="mb-5"
   >
-  <v-container>
-    <h2>About</h2>
-    <div style="height: 1000px;"></div>
+  <v-container
+  class="my-12"
+  >
+    <aboutView />
   </v-container>
   </div>
 
   <div
+  id="skills"
   style="background: #E0E1DB;"
+    class="mb-5"
   >
   <v-container>
-    <h2>About</h2>
-    <div style="height: 1000px;"></div>
+    <skills-view />
   </v-container>
   </div>
-  </div>
+
+<div
+id="works"
+  class="mb-5"
+>
+  <v-container>
+    <works-view />
+  </v-container>
+</div>
+
+<div
+id="hobbys"
+      style="background: #E0E1DB;"
+       class="mb-5"
+>
+    <v-container>
+    <hobbys-view />
+  </v-container>
+</div>
+
+<div
+id="contact"
+  class="mb-5"
+>
+    <v-container>
+    <contact-view />
+  </v-container>
+</div>
+</div>
 </template>
 
 <script>

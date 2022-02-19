@@ -35,6 +35,7 @@
         method="post"
         data-netlify-honeypot="botfield"
         netlify
+        action="/success"
         @click.prevent="submit"
         >
 
@@ -114,6 +115,7 @@
 
 <script>
 export default {
+  name: "ContactPage",
     data() {
         return {
             title: "contact",

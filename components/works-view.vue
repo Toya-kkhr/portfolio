@@ -97,6 +97,7 @@
 
 <script>
 export default {
+    name: "WorksPage",
     data() {
         return {
             dialog: false,

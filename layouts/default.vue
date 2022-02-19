@@ -14,7 +14,7 @@
         <v-list-item
           v-for="(item) in items"
           :key="item.title"
-          v-scroll-to="item.to"
+          :v-scroll-to="item.to"
           to
           nuxt
           @click.stop="drawer = !drawer"
@@ -68,68 +68,20 @@
     text
     active-class
     nuxt
-    to
       >
 
     {{ item.title }}
       </v-btn>
 </div>
     </v-app-bar>
-      <v-main>
 
-<hero-view />
+<v-main>
+    <Nuxt/>
+</v-main>
 
-  <div
-  id="about"
-  class="mb-5"
-  >
-  <v-container
-  class="my-12"
-  >
-    <aboutView />
-  </v-container>
-  </div>
-
-  <div
-  id="skills"
-  style="background: #E0E1DB;"
-    class="mb-5"
-  >
-  <v-container>
-    <skills-view />
-  </v-container>
-  </div>
-
-<div
-id="works"
-  class="mb-5"
+<v-footer
+padless
 >
-  <v-container>
-    <works-view />
-  </v-container>
-</div>
-
-<div
-id="hobbys"
-      style="background: #E0E1DB;"
-       class="mb-5"
->
-    <v-container>
-    <hobbys-view />
-  </v-container>
-</div>
-
-<div
-id="contact"
-  class="mb-5"
->
-    <v-container>
-    <contact-view />
-  </v-container>
-</div>
-
-      </v-main>
-  <v-footer padless>
  <v-card
  width="100%"
  class="text-center"
@@ -156,7 +108,8 @@ id="contact"
           {{ new Date().getFullYear() }} — <strong>Toya Kakohara</strong>
         </v-card-text>
  </v-card>
-    </v-footer>
+</v-footer>
+ 
   </v-app>
 </template>
 
@@ -169,23 +122,23 @@ export default {
       items: [
         {
           title: 'About',
-          to: '#about',
+          to: '#about'
         },
         {
           title: 'Skills',
-          to: '#skills',
+          to: '#skills'
         },
         {
           title: 'Works',
-          to: '#works',
+          to: '#works'
         },
         {
           title: 'Hobbys',
-          to: '#hobbys',
+          to: '#hobbys'
         },
         {
           title: 'Contact',
-          to: '#contact',
+          to: '#contact'
         },
       ],
 
