@@ -11,9 +11,14 @@
              >
                 <vue-typer
                 :text="hero"
-                :repeat="0"
-                :type-delay="80"
+                :repeat="Infinity"
+                :type-delay="90"
+                :pre-type-delay="1000"
+                :erase-delay="110"
+                :pre-erase-delay="2000"
                 caret-animation="smooth"
+                erase-style="backspace"
+                initial-action="typing"
                 ></vue-typer>
           
         </h1>
