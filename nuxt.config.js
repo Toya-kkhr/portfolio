@@ -61,6 +61,16 @@ export default {
     baseURL: '/',
   },
 
+  router: {
+    middleware: 'redirect',
+    extendRoutes (routes, resolve) {
+      routes.push({
+        path: '*',
+        component: resolve(__dirname, 'pages/index.vue')
+      })
+    }
+  },
+
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],

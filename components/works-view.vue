@@ -123,7 +123,7 @@ export default {
                 {
                     title: "Portfolioサイト",
                      image: "/portfolio-img.webp",
-                     lazy: "portfolio-lazy.webp",
+                     lazy: "/portfolio-lazy.webp",
                      skill: "Vue.js/ Nuxt.js/ adobe XD/ Netlify",
                      url: "/",
                      exp: "本サイトです。柔らかい色合いでシンプルなデザインを心がけて作成しました。"
