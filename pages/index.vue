@@ -126,7 +126,7 @@ export default {
     .scene({
       triggerElement: '#contact' ,
       triggerHook: 0,
-      offset: -500,
+      offset: -400,
       duration: 300,
       reverse: true
     })
