@@ -27,7 +27,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src:'@/plugins/vee-validate', ssr: false},
-    { src:'@/plugins/vue-typer', ssr:false }
+    { src:'@/plugins/vue-typer', ssr:false },
+    { src:'@/plugins/vue-scroll-magic', ssr: false}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -46,7 +47,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     ['vue-scrollto/nuxt', { duration: 1000 }],
-    ['@nuxtjs/google-gtag']
+    ['@nuxtjs/google-gtag'],
   ],
 
   'google-gtag':{

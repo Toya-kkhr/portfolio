@@ -57,5 +57,89 @@ id="contact"
 <script>
 export default {
   name: 'IndexPage',
+  mounted() {
+    const about = this.$scrollmagic
+    .scene({
+      triggerElement: '#about' ,
+      triggerHook: 0,
+      offset: -300,
+      duration: 300,
+      reverse: false
+    })
+    .setTween('#about',{
+      css: {
+        opacity: '1'
+      }
+    })
+
+    this.$scrollmagic.addScene(about)
+    
+    const skills = this.$scrollmagic
+    .scene({
+      triggerElement: '#skills' ,
+      triggerHook: 0,
+      offset: -300,
+      duration: 300,
+      reverse: false
+    })
+    .setTween('#skills',{
+      css: {
+        opacity: '1'
+      }
+    })
+
+    this.$scrollmagic.addScene(skills)
+
+    const works = this.$scrollmagic
+    .scene({
+      triggerElement: '#works' ,
+      triggerHook: 0,
+      offset: -300,
+      duration: 300,
+      reverse: false
+    })
+    .setTween('#works',{
+      css: {
+        opacity: '1'
+      }
+    })
+
+    this.$scrollmagic.addScene(works)
+
+    const hobbys = this.$scrollmagic
+    .scene({
+      triggerElement: '#hobbys' ,
+      triggerHook: 0,
+      offset: -300,
+      duration: 300,
+      reverse: false
+    })
+    .setTween('#hobbys',{
+      css: {
+        opacity: '1'
+      }
+    })
+
+    this.$scrollmagic.addScene(hobbys)
+
+    const contact = this.$scrollmagic
+    .scene({
+      triggerElement: '#contact' ,
+      triggerHook: 0,
+      offset: -280,
+      duration: 450,
+      reverse: false
+    })
+    .setTween('#contact',{
+      css: {
+        opacity: '1'
+      }
+    })
+
+    this.$scrollmagic.addScene(contact)
+
+  }
+
+
 }
 </script>
