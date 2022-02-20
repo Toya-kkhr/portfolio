@@ -62,9 +62,9 @@ export default {
     .scene({
       triggerElement: '#about' ,
       triggerHook: 0,
-      offset: -300,
-      duration: 300,
-      reverse: false
+      offset: -500,
+      duration: 600,
+      reverse: true
     })
     .setTween('#about',{
       css: {
@@ -78,9 +78,9 @@ export default {
     .scene({
       triggerElement: '#skills' ,
       triggerHook: 0,
-      offset: -300,
-      duration: 300,
-      reverse: false
+      offset: -500,
+      duration: 600,
+      reverse: true
     })
     .setTween('#skills',{
       css: {
@@ -94,9 +94,9 @@ export default {
     .scene({
       triggerElement: '#works' ,
       triggerHook: 0,
-      offset: -300,
-      duration: 300,
-      reverse: false
+       offset: -500,
+      duration: 600,
+      reverse: true
     })
     .setTween('#works',{
       css: {
@@ -110,9 +110,9 @@ export default {
     .scene({
       triggerElement: '#hobbys' ,
       triggerHook: 0,
-      offset: -300,
-      duration: 300,
-      reverse: false
+      offset: -500,
+      duration: 600,
+      reverse: true
     })
     .setTween('#hobbys',{
       css: {
@@ -126,9 +126,9 @@ export default {
     .scene({
       triggerElement: '#contact' ,
       triggerHook: 0,
-      offset: -280,
-      duration: 450,
-      reverse: false
+      offset: -500,
+      duration: 600,
+      reverse: true
     })
     .setTween('#contact',{
       css: {
