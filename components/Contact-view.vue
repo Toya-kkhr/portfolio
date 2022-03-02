@@ -84,10 +84,10 @@
             name="contact" 
             method="POST" 
             data-netlify="true"
-            @click.prevent="submit"
+            @click.prevent="validate"
           >
 
-          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="form-name" value="contact" />
           <input v-model="name" type="hidden" name="name" />
           <input v-model="email" type="hidden" name="email" />
           <input v-model="message" type="hidden" name="message" />
@@ -130,10 +130,18 @@ export default {
         }
     },
     methods: {
-        submit() {
-          if (this.isSending) {
-            return
+        validate(){
+          if(
+            !this.name ||
+            !this.email ||
+            !this.message
+          ) {
+            return false
           }
+          this.submit()
+        },
+
+        submit() {
 
             const params = new URLSearchParams()
             params.append('form-name', 'contact')
@@ -155,6 +163,7 @@ export default {
             .finally(() => {
             })
         }
+        
     }
 }
 </script>
