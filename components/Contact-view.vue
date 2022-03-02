@@ -131,14 +131,13 @@ export default {
     },
     methods: {
         validate(){
-          if(
-            !this.name ||
-            !this.email ||
-            !this.message
-          ) {
-            return false
-          }
-          this.submit()
+            this.$refs.observer.validate().then(result => {
+              if(result){
+                this.submit()
+              }else{
+                return false
+              }
+            })
         },
 
         submit() {
