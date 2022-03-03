@@ -64,6 +64,7 @@
     v-for="(item, i) in items"
     :key="i"
     v-scroll-to="item.to"
+    :to="item.link"
     text
     active-class
     nuxt
@@ -71,6 +72,7 @@
 
     {{ item.title }}
       </v-btn>
+
 </div>
     </v-app-bar>
 
@@ -121,11 +123,11 @@ export default {
       items: [
         {
           title: 'About',
-          to: '#about'
+          to: '#about',
         },
         {
           title: 'Skills',
-          to: '#skills'
+          to: '#skills',
         },
         {
           title: 'Works',
