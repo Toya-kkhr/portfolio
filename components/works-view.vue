@@ -127,6 +127,14 @@ export default {
                      skill: "Vue.js/ Nuxt.js/ adobe XD/ Netlify",
                      url: "/",
                      exp: "本サイトです。柔らかい色合いでシンプルなデザインを心がけて作成しました。"
+                },
+                {
+                    title: "ブログサイト",
+                     image: "/blog-img.webp",
+                     lazy: "/blog-lazy.webp",
+                     skill: "Vue.js/ Nuxt.js/ Netlify/ WP REST API/ AWS light sail",
+                     url: "https://blog.kakohara.me/",
+                     exp: "ブログサイトです。UIにニューモーフィズムを採用し作成しました。"
                 }
             ]
         }
