@@ -30,7 +30,7 @@
     <div
     class="pa-3 text-body-1"
     >
-Vue.js/ Nuxt.js/ Node.js/ Swift/ Python/ Django<br>
+Vue.js/ Nuxt.js/ React.js/ Next.js/ Node.js/ Swift/ Python/ Django<br>
 HTML/ CSS/ SCSS/ Java Script/ jQuery/ Photoshop/ adobe XD<br>
 Linux/ Git/ AWS/ MySQL/ SQLite
     </div>
