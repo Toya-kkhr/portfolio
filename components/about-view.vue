@@ -36,17 +36,6 @@
  大阪生まれ24歳。専門学校卒業後、某ホテルにて3年弱ウェディングプランナーとして従事。
  その後独学でプログラミングを学び、受託開発会社にてプログラマーを経験後、現在自社サービス開発会社にて上流工程に携わっている。
     </div>
-    <div>
-      <v-btn
-        width="60%"
-        height="50px"
-        class="rounded-pill"
-        href="https://blog.kakohara.me/"
-        target="_blank"
-      >
-        BLOGサイトへ
-      </v-btn>
-    </div>
           </v-col>
     </v-row>
 </template>
